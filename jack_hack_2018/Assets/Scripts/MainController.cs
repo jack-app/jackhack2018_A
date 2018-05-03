@@ -10,34 +10,48 @@ public class MainController : MonoBehaviour {
 		Idle,ShowingMenuBar
 	}
 
+	public GameObject MenuBar;
+
 	private mState state = mState.Idle;
 
 	// Use this for initialization
 	void Start () {
-		Vector3 mPos = Camera.main.ScreenToViewportPoint (Input.mousePosition ());
+		
+	}
+
+	// Update is called once per frame
+	void Update () {
+		Vector3 mPos = Camera.main.ScreenToViewportPoint (Input.mousePosition);
 		switch (state) {
 		case mState.Idle:
 			break;
 		case mState.ShowingMenuBar:
-			if (Input.GetMouseButtonDown (0) && mPos.x > 0.4) {
+			if (Input.GetMouseButtonDown(0)&& mPos.x > 0.4) {
 				HideMenuBar ();
 			}
 			break;
 		}
 	}
 
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
-			
-		}
-	}
-
 	public void ShowMenuBar(){
-		
+		MenuBar.GetComponent<Animator> ().SetBool ("ShowMenuBar",true);
+		state = mState.ShowingMenuBar;
 	}
 
 	void HideMenuBar(){
-		
+		MenuBar.GetComponent<Animator> ().SetBool ("ShowMenuBar",false);
+		state = mState.Idle;
+	}
+
+	public void ChangeMenuBarState(){
+		switch (state) {
+		case mState.Idle:
+			ShowMenuBar ();
+			break;
+		case mState.ShowingMenuBar:
+			HideMenuBar ();
+			break;
+		}
+
 	}
 }
