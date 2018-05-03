@@ -11,6 +11,7 @@ public class MainController : MonoBehaviour {
 	}
 
 	public GameObject MenuBar;
+	public GameObject UnderTabPanel;
 
 	private mState state = mState.Idle;
 
@@ -34,11 +35,13 @@ public class MainController : MonoBehaviour {
 	}
 
 	public void ShowMenuBar(){
+		UnderTabPanel.SetActive (true);
 		MenuBar.GetComponent<Animator> ().SetBool ("ShowMenuBar",true);
 		state = mState.ShowingMenuBar;
 	}
 
 	void HideMenuBar(){
+		UnderTabPanel.SetActive (false);
 		MenuBar.GetComponent<Animator> ().SetBool ("ShowMenuBar",false);
 		state = mState.Idle;
 	}
