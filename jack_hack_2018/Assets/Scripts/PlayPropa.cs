@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class PlayPropa : MonoBehaviour {
 
@@ -13,12 +14,20 @@ public class PlayPropa : MonoBehaviour {
 
 	private string FilePath;
 
+	private MainController MC;
+	private int pID;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Awake () {
+		MC = GameObject.FindGameObjectWithTag ("GameController").GetComponent<MainController> ();
 	}
 
-	public void Play(int pID){
+	void OnEnable(){
+		Play ();
+	}
+
+	public void Play(){
+		pID = MC.PlayingID;
 		StartCoroutine (PlayCoroutine (pID));
 	}
 
@@ -40,7 +49,7 @@ public class PlayPropa : MonoBehaviour {
 			break;
 		}
 
-		yield return new WaitForSeconds (PD.pPlayTime[pID]);
+		yield return new WaitForSeconds (int.Parse(PD.pPlayTime[pID]));
 
 		Tameta.SetActive (true);
 		gameObject.SetActive (false);

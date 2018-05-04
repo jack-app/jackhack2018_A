@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using NCMB;
 using System;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainController : MonoBehaviour {
 
@@ -17,13 +19,20 @@ public class MainController : MonoBehaviour {
 	public GameObject Hiromeru;
 	public GameObject Koukan;
 	public GameObject MyPage;
+	public GameObject Play;
 
+	//SetActive関係でここに参照通しとく
+	public Text IntroText;
+
+	public int PlayingID;
+
+	public MakeNodes MN;
 
 	private mState state = mState.Idle;
 
 	// Use this for initialization
 	void Start () {
-		
+		gameObject.GetComponent<DataImpoter> ().Import ();
 	}
 
 	// Update is called once per frame
@@ -70,13 +79,13 @@ public class MainController : MonoBehaviour {
 			Tameru.SetActive (true);
 			break;
 		case "Hiromeru":
-			Hiromeru.SetActive (true);
+			SceneManager.LoadScene ("Hiromeru");
 			break;
 		case "Koukan":
 			Koukan.SetActive (true);
 			break;
 		case "MyPage":
-			MyPage.SetActive (true);
+			SceneManager.LoadScene ("MyPage");
 			break;
 		}
 	}
