@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 8b8ab8bf12708b64c842c192d1260b03
-timeCreated: 1525351961
+guid: 4acebbeb262755e4e8b5a081a520c694
+timeCreated: 1525395887
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: cmm4su3g_0
-    21300002: cmm4su3g_1
+    21300000: images_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -103,29 +102,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cmm4su3g_0
+      name: images_0
       rect:
         serializedVersion: 2
-        x: 282
-        y: 141
-        width: 207
-        height: 174
+        x: 169
+        y: 114
+        width: 42
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: cmm4su3g_1
-      rect:
-        serializedVersion: 2
-        x: 590
-        y: 162
-        width: 170
-        height: 139
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
