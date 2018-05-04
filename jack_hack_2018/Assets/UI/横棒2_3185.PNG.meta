@@ -6,6 +6,7 @@ TextureImporter:
   fileIDToRecycleName:
     21300000: "\u6A2A\u68D22_3185_0"
     21300002: "\u6A2A\u68D22_3185_1"
+    21300004: "\u6A2A\u68D22_3185_2"
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -111,7 +112,7 @@ TextureImporter:
         width: 20
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -124,6 +125,20 @@ TextureImporter:
         y: 27
         width: 33
         height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "\u6A2A\u68D22_3185_2"
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 20
+        width: 52
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
