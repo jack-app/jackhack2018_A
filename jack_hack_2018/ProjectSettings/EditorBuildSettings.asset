@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scene/Hiromeru.unity
+    guid: ba90bf707098d4e7685a2c970635a67c
+  - enabled: 1
     path: Assets/Scene/Title.unity
     guid: 536a2924984e743fb9dc015bfeea1094
   - enabled: 1
