@@ -11,3 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4e51e88fed44ae6ac612bb294676a9, type: 3}
   m_Name: PostData
   m_EditorClassIdentifier: 
+  pFileName:
+  - tester_down_1.png
+  pSumnail:
+  - tester_sumnail
+  pTitle:
+  - TEST!!
+  pComment:
+  - I CAN DO IT!!
+  pType:
+  - image
+  pPlayTime:
+  - 3
