@@ -13,6 +13,12 @@ public class MainController : MonoBehaviour {
 	public GameObject MenuBar;
 	public GameObject UnderTabPanel;
 
+	public GameObject Tameru;
+	public GameObject Hiromeru;
+	public GameObject Koukan;
+	public GameObject MyPage;
+
+
 	private mState state = mState.Idle;
 
 	// Use this for initialization
@@ -55,6 +61,30 @@ public class MainController : MonoBehaviour {
 			HideMenuBar ();
 			break;
 		}
+	}
 
+	public void ChangeMenuPanelTo(string key){
+		ClearMenuPanels ();
+		switch (key) {
+		case "Tameru":
+			Tameru.SetActive (true);
+			break;
+		case "Hiromeru":
+			Hiromeru.SetActive (true);
+			break;
+		case "Koukan":
+			Koukan.SetActive (true);
+			break;
+		case "MyPage":
+			MyPage.SetActive (true);
+			break;
+		}
+	}
+
+	void ClearMenuPanels(){
+		Tameru.SetActive (false);
+		Hiromeru.SetActive (false);
+		Koukan.SetActive (false);
+		MyPage.SetActive (false);
 	}
 }
