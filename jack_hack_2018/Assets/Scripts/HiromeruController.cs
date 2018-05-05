@@ -11,9 +11,11 @@ public class HiromeruController: MonoBehaviour {
 	public InputField ifTitle;
 	public InputField ifComment;
 	public InputField ifType;
+	public Sentakushi sntType;
 	public InputField ifPlayTime;
 	public InputField ifIntro;
 	public InputField ifPlayCount;
+	public InputField ifFileName;
 
 	[SerializeField] private Unimgpicker imagePicker;
 
@@ -54,6 +56,10 @@ public class HiromeruController: MonoBehaviour {
 		PostData (data);
 	}
 		
+	public void SetFileName(){
+		data [0] = ifFileName.text;
+	}
+
 	public void SetTitle(){
 		data [2] = ifTitle.text;
 	}
@@ -65,9 +71,13 @@ public class HiromeruController: MonoBehaviour {
 	public void SetPlayTime(){
 		data [5] = ifPlayTime.text;
 	}
-
+	/*
 	public void SetType(){
 		data [4] = ifType.text;
+	}
+	*/
+	public void SetType(){
+		data [4] = sntType.s;
 	}
 
 	public void SetIntro(){

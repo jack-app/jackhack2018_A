@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 114378025245723498}
   - component: {fileID: 114844981462704106}
   m_Layer: 5
-  m_Name: Dropdown2 1
+  m_Name: Dropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
