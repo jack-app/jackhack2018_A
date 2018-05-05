@@ -17,6 +17,9 @@ public class HiromeruController: MonoBehaviour {
 	public InputField ifPlayCount;
 	public InputField ifFileName;
 
+	public GameObject Sumnail;
+	public GameObject File;
+
 	[SerializeField] private Unimgpicker imagePicker;
 
 	public void SetSumnail(){
@@ -26,7 +29,7 @@ public class HiromeruController: MonoBehaviour {
 			if(data[1] == ""){
 			string id = Time.time.ToString();
 			data[1] = id;
-			StartCoroutine(SaveData(path,data[1]));
+				StartCoroutine(SaveData(path,data[1],Sumnail));
 			}
 		};
 		OnPressShowPicker ();
@@ -39,7 +42,7 @@ public class HiromeruController: MonoBehaviour {
 			if(data[0] == ""){
 			string id = Time.time.ToString();
 			data[0] = id;
-			StartCoroutine(SaveData(path,data[0]));
+				StartCoroutine(SaveData(path,data[0],File));
 			}
 		};
 		OnPressShowPicker ();
@@ -95,13 +98,14 @@ public class HiromeruController: MonoBehaviour {
 
 
 
-	private IEnumerator SaveData( string path, string fname)
+	private IEnumerator SaveData( string path, string fname, GameObject imageobj)
 	{
 		Debug.Log (path);
 		var url = "file://" + path;
 		var www = new WWW (url);
 		yield return www;
 
+		imageobj.GetComponent<RawImage> ().texture = www.texture;
 		SaveFileData.SaveFromByte (www.bytes, fname);
 	}
 
