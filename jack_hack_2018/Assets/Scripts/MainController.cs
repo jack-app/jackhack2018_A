@@ -73,20 +73,24 @@ public class MainController : MonoBehaviour {
 	}
 
 	public void ChangeMenuPanelTo(string key){
-		ClearMenuPanels ();
-		switch (key) {
-		case "Tameru":
-			Tameru.SetActive (true);
-			break;
-		case "Hiromeru":
-			SceneManager.LoadScene ("Hiromeru");
-			break;
-		case "Koukan":
-			Koukan.SetActive (true);
-			break;
-		case "MyPage":
-			SceneManager.LoadScene ("MyPage");
-			break;
+		if (SceneManager.GetActiveScene ().name == "Main") {
+			ClearMenuPanels ();
+			switch (key) {
+			case "Tameru":
+				Tameru.SetActive (true);
+				break;
+			case "Hiromeru":
+				SceneManager.LoadScene ("Hiromeru");
+				break;
+			case "Koukan":
+				Koukan.SetActive (true);
+				break;
+			case "MyPage":
+				SceneManager.LoadScene ("MyPage");
+				break;
+			}
+		} else if (SceneManager.GetActiveScene ().name == "MyPage" || SceneManager.GetActiveScene ().name == "Hiromeru") {
+			SceneManager.LoadScene ("Main");
 		}
 	}
 

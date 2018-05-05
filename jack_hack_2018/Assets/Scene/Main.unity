@@ -1392,7 +1392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &483383602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,7 +1481,7 @@ GameObject:
   - component: {fileID: 670685027}
   - component: {fileID: 670685026}
   m_Layer: 5
-  m_Name: PlayImage
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PD: {fileID: 11400000, guid: 8d8dbb826705f462c86b6351dbd68840, type: 2}
   Tameta: {fileID: 1353508691}
-  PlayImage: {fileID: 670685025}
+  Player: {fileID: 670685025}
 --- !u!114 &798301652
 MonoBehaviour:
   m_ObjectHideFlags: 0

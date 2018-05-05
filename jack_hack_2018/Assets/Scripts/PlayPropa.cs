@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Video;
 
 public class PlayPropa : MonoBehaviour {
 
@@ -10,7 +11,7 @@ public class PlayPropa : MonoBehaviour {
 
 	public GameObject Tameta;
 
-	public GameObject PlayImage;
+	public GameObject Player;
 
 	private string FilePath;
 
@@ -42,10 +43,16 @@ public class PlayPropa : MonoBehaviour {
 		switch (PD.pType [pID]) {
 		case "image":
 			// webサーバから取得した画像をRaw Imagで表示する
-			RawImage rawImage = PlayImage.GetComponent<RawImage> ();
+			RawImage rawImage = Player.GetComponent<RawImage> ();
 			rawImage.texture = www.textureNonReadable;
 			break;
 		case "music":
+			break;
+		case "movie":
+			/*
+			Player.GetComponent<Renderer> ().material.mainTexture = www.GetMovieTexture ();
+			movie.Play ();
+			*/
 			break;
 		}
 
