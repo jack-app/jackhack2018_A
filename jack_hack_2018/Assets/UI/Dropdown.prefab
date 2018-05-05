@@ -480,10 +480,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Text: {fileID: 114016919099307018}
-  m_Image: {fileID: 0}
-  m_RectTransform: {fileID: 224702547759895392}
-  m_Toggle: {fileID: 114087012907158042}
 --- !u!114 &114481351539648610
 MonoBehaviour:
   m_ObjectHideFlags: 1
