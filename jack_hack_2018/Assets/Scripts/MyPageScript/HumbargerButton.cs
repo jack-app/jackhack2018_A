@@ -16,6 +16,6 @@ public class HumbargerButton : MonoBehaviour {
 	}
     public void Onclick()
     {
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("Main");
     }
 }

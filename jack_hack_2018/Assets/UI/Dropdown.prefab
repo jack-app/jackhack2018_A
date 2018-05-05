@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 114378025245723498}
   - component: {fileID: 114844981462704106}
   m_Layer: 5
-  m_Name: Dropdown2 1
+  m_Name: Dropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -480,10 +480,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Text: {fileID: 114016919099307018}
-  m_Image: {fileID: 0}
-  m_RectTransform: {fileID: 224702547759895392}
-  m_Toggle: {fileID: 114087012907158042}
 --- !u!114 &114481351539648610
 MonoBehaviour:
   m_ObjectHideFlags: 1
