@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PD: {fileID: 11400000, guid: 8d8dbb826705f462c86b6351dbd68840, type: 2}
   Tameta: {fileID: 1353508691}
-  Player: {fileID: 0}
+  Player: {fileID: 670685025}
 --- !u!114 &798301652
 MonoBehaviour:
   m_ObjectHideFlags: 0
