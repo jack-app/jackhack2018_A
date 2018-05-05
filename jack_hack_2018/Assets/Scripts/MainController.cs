@@ -27,6 +27,7 @@ public class MainController : MonoBehaviour {
 	public int PlayingID;
 
 	public MakeNodes MN;
+	public Text BannerText;
 
 	private mState state = mState.Idle;
 
@@ -77,15 +78,19 @@ public class MainController : MonoBehaviour {
 			ClearMenuPanels ();
 			switch (key) {
 			case "Tameru":
+				BannerText.text = "貯める";
 				Tameru.SetActive (true);
 				break;
 			case "Hiromeru":
+				BannerText.text = "広める";
 				SceneManager.LoadScene ("Hiromeru");
 				break;
 			case "Koukan":
+				BannerText.text = "交換";
 				Koukan.SetActive (true);
 				break;
 			case "MyPage":
+				BannerText.text = "マイページ";
 				SceneManager.LoadScene ("MyPage");
 				break;
 			}

@@ -12,4 +12,6 @@ public class PostData : ScriptableObject {
 	public List<string> pPlayTime;
 	public List<string> pIntro;
 	public List<string> pPlayCount;
+
+	public List<int> MaxNagesen;
 }
