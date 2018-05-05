@@ -49,10 +49,11 @@ public class PlayPropa : MonoBehaviour {
 		case "music":
 			break;
 		case "movie":
-			/*
-			Player.GetComponent<Renderer> ().material.mainTexture = www.GetMovieTexture ();
-			movie.Play ();
-			*/
+			Player.GetComponent<VideoPlayer> ().clip = Resources.Load<VideoClip> (PD.pFileName [pID]);
+			Player.GetComponent<VideoPlayer> ().Play ();
+			break;
+		case "URL":
+			Application.OpenURL (PD.pFileName [pID]);
 			break;
 		}
 

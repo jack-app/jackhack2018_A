@@ -95,7 +95,11 @@ public class MainController : MonoBehaviour {
 				break;
 			}
 		} else if (SceneManager.GetActiveScene ().name == "MyPage" || SceneManager.GetActiveScene ().name == "Hiromeru") {
-			SceneManager.LoadScene ("Main");
+			if (key == "MyPage") {
+				SceneManager.LoadScene ("Main");
+			} else {
+				SceneManager.LoadScene ("Main");
+			}
 		}
 	}
 
